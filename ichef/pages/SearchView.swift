@@ -56,7 +56,7 @@ struct SearchView: View {
                 .padding(.horizontal, 68)
                 .navigationTitle("Choose the cuisine")
                 .searchable(text: $searchText)
-                
+                // teste eurian
                 
             }
             
