@@ -25,6 +25,7 @@ var sampleData: [ SearchRecipe ] =
         image: ""
     )
 ]
+// teste joao pedro
 
 struct SearchView: View {
     @State private var searchText = ""
