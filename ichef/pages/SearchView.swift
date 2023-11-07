@@ -17,12 +17,17 @@ var sampleData: [ SearchRecipe ] =
     SearchRecipe(
         id: "1",
         title: "Massas",
-        image: ""
+        image: "https://static.wixstatic.com/media/4798a8_0ff820b2a2ed4f25b99dd853ac8ace77~mv2.jpg/v1/fill/w_640,h_428,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/4798a8_0ff820b2a2ed4f25b99dd853ac8ace77~mv2.jpg"
     ),
     SearchRecipe(
         id: "2",
         title: "Carnes",
-        image: ""
+        image: "https://supermercadosrondon.com.br/guiadecarnes/images/postagens/as_7_melhores_carnes_para_churrasco_21-05-2019.jpg"
+    ),
+    SearchRecipe(
+        id: "3",
+        title: "Sopas",
+        image: "https://static.wixstatic.com/media/4798a8_0ff820b2a2ed4f25b99dd853ac8ace77~mv2.jpg/v1/fill/w_640,h_428,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/4798a8_0ff820b2a2ed4f25b99dd853ac8ace77~mv2.jpg"
     )
 ]
 // teste joao pedro
@@ -31,22 +36,31 @@ struct SearchView: View {
     @State private var searchText = ""
     
     var body: some View {
+        
         NavigationStack {
+            
             ZStack {
                 Rectangle()
                     .frame(width: 500, height: 1000)
                     .foregroundColor(Color("Background"))
                     .ignoresSafeArea()
                 
-                // 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
                 VStack {
                     Image("Logo_Sem_Slogan")
+                        .resizable()
+                        .frame(width: 75, height: 75, alignment: .topLeading)
+                        .foregroundColor(Color.white)
                     
                     
                     Spacer()
-                    ForEach(sampleData) { recipe in
-                        RecipeTypeView(title: recipe.title!, image: recipe.image!)
-                    }
+                
+                        ForEach(sampleData) { recipe in
+                            
+                                RecipeTypeView(title: recipe.title!, image: recipe.image!)
+                            
+                        }
+                    
+                    
                     .listRowSeparator(.hidden, edges: .all)
                     Spacer()
                     Spacer()
@@ -55,9 +69,12 @@ struct SearchView: View {
                 }
                 .padding(.vertical, 50)
                 .padding(.horizontal, 68)
-                .navigationTitle("Choose the cuisine")
+                .navigationTitle("Pesquisar")
                 .searchable(text: $searchText)
+<<<<<<< HEAD
                 // teste eurian
+=======
+>>>>>>> origin/laura_dev
                 
             }
             
