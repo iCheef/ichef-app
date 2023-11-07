@@ -31,16 +31,31 @@ struct RecipeTypeView: View {
                     
                     Spacer()
                     Text(title)
-                    .font(.title)
-                    .bold()
-                    .foregroundColor(.white)
-                    .padding()
-                        Spacer()
-                        Spacer()
-                        Spacer()
-                        Spacer()
-                        Spacer()
+                        .font(.title)
+                        .bold()
+                        .foregroundColor(.white)
+                        .padding()
+                    Spacer()
+                    Spacer()
+                    Spacer()
+                    Spacer()
+                    Spacer()
                     
+                    Button(action: {
+                        isFavorited.toggle()
+                        // Aqui você pode adicionar a lógica para adicionar/remover a receita dos favoritos
+                        if isFavorited {
+                            // Adicione a receita aos favoritos
+                        } else {
+                            // Remova a receita dos favoritos
+                        }
+                    })
+                    {
+                        Image(systemName: isFavorited ? "heart.fill" : "heart")
+                            .resizable()
+                            .foregroundColor(isFavorited ? .red : .gray)
+                            .frame(width: 35, height: 30, alignment: .center)
+                    }
                     Spacer()
                 }
             }
