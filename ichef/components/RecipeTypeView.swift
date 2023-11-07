@@ -11,7 +11,7 @@ struct RecipeTypeView: View {
     @State public var title : String
     @State public var image : String
     @State private var isFavorited = false
-    static var recipeTypes : [ SearchRecipe ] = sampleData
+    static var recipeTypes : [ SearchRecipe ] = sampleDataRecipeType
     var body: some View {
         NavigationStack {
             ZStack{
@@ -30,34 +30,33 @@ struct RecipeTypeView: View {
                         .padding()
                     
                     Spacer()
-                    NavigationLink(title) {
-                       
-                            
-                    }
-                    .font(.title)
-                    .bold()
-                    .foregroundColor(.white)
-                    .padding()
-                        Spacer()
-                        Spacer()
-                        Spacer()
-                        Spacer()
-                        Spacer()
+                    Text(title)
+                        .font(.title)
+                        .bold()
+                        .foregroundColor(.white)
+                        .padding()
+                    Spacer()
+                    Spacer()
+                    Spacer()
+                    Spacer()
+                    Spacer()
+                    
                     Button(action: {
-                                            isFavorited.toggle()
-                                            // Aqui você pode adicionar a lógica para adicionar/remover a receita dos favoritos
-                                            if isFavorited {
-                                                // Adicione a receita aos favoritos
-                                            } else {
-                                                // Remova a receita dos favoritos
-                                            }
-                                        })
+                        isFavorited.toggle()
+                        // Aqui você pode adicionar a lógica para adicionar/remover a receita dos favoritos
+                        if isFavorited {
+                            // Adicione a receita aos favoritos
+                        } else {
+                            // Remova a receita dos favoritos
+                        }
+                    })
                     {
-                                            Image(systemName: isFavorited ? "heart.fill" : "heart")
-                                                .resizable()
-                                                .foregroundColor(isFavorited ? .red : .gray)
-                                                .frame(width: 35, height: 30, alignment: .center)
-                                        }
+                        Image(systemName: isFavorited ? "heart.fill" : "heart")
+                            .resizable()
+                            .foregroundColor(isFavorited ? .red : .gray)
+                            .frame(width: 35, height: 30, alignment: .center)
+                    }
+                    
                     Spacer()
                 }
             }

@@ -19,6 +19,9 @@
 		FAB3EF052AF1ACB40091F966 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB3EF042AF1ACB40091F966 /* ContentView.swift */; };
 		FAB3EF072AF1ACB60091F966 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAB3EF062AF1ACB60091F966 /* Assets.xcassets */; };
 		FAB3EF0A2AF1ACB60091F966 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAB3EF092AF1ACB60091F966 /* Preview Assets.xcassets */; };
+		FAE019B22AF9BA9E00D79B98 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = FAE019B12AF9BA9E00D79B98 /* .gitignore */; };
+		FAE019B42AF9BF9700D79B98 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE019B32AF9BF9700D79B98 /* UserModel.swift */; };
+		FAE019B62AF9C0CE00D79B98 /* RecipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE019B52AF9C0CE00D79B98 /* RecipeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +39,9 @@
 		FAB3EF042AF1ACB40091F966 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		FAB3EF062AF1ACB60091F966 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FAB3EF092AF1ACB60091F966 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		FAE019B12AF9BA9E00D79B98 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		FAE019B32AF9BF9700D79B98 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		FAE019B52AF9C0CE00D79B98 /* RecipeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +72,7 @@
 			children = (
 				FA6D577F2AF1AE860076122D /* NavBar.swift */,
 				FA6D578A2AF1BD090076122D /* RecipeTypeView.swift */,
+				FAE019B52AF9C0CE00D79B98 /* RecipeView.swift */,
 			);
 			path = components;
 			sourceTree = "<group>";
@@ -74,6 +81,7 @@
 			isa = PBXGroup;
 			children = (
 				FA6D578D2AF1BD580076122D /* SearchViewModel.swift */,
+				FAE019B32AF9BF9700D79B98 /* UserModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -105,6 +113,7 @@
 				FAB3EF042AF1ACB40091F966 /* ContentView.swift */,
 				FAB3EF062AF1ACB60091F966 /* Assets.xcassets */,
 				FAB3EF082AF1ACB60091F966 /* Preview Content */,
+				FAE019B12AF9BA9E00D79B98 /* .gitignore */,
 			);
 			path = ichef;
 			sourceTree = "<group>";
@@ -176,6 +185,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FAB3EF0A2AF1ACB60091F966 /* Preview Assets.xcassets in Resources */,
+				FAE019B22AF9BA9E00D79B98 /* .gitignore in Resources */,
 				FAB3EF072AF1ACB60091F966 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -193,10 +203,12 @@
 				FA6D57862AF1AEB90076122D /* SearchRecipeView.swift in Sources */,
 				FA6D578B2AF1BD090076122D /* RecipeTypeView.swift in Sources */,
 				FA6D57842AF1AEA10076122D /* FavoritesView.swift in Sources */,
+				FAE019B62AF9C0CE00D79B98 /* RecipeView.swift in Sources */,
 				FA6D578E2AF1BD580076122D /* SearchViewModel.swift in Sources */,
 				FA6D57802AF1AE860076122D /* NavBar.swift in Sources */,
 				FAB3EF052AF1ACB40091F966 /* ContentView.swift in Sources */,
 				FAB3EF032AF1ACB40091F966 /* ichefApp.swift in Sources */,
+				FAE019B42AF9BF9700D79B98 /* UserModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

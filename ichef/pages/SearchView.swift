@@ -12,24 +12,25 @@ struct SearchRecipe : Decodable, Identifiable {
     var image   : String?
 }
 
-var sampleData: [ SearchRecipe ] =
+var sampleDataRecipeType: [ SearchRecipe ] =
 [
     SearchRecipe(
         id: "1",
         title: "Massas",
-        image: "https://static.wixstatic.com/media/4798a8_0ff820b2a2ed4f25b99dd853ac8ace77~mv2.jpg/v1/fill/w_640,h_428,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/4798a8_0ff820b2a2ed4f25b99dd853ac8ace77~mv2.jpg"
+        image: ""
     ),
     SearchRecipe(
         id: "2",
         title: "Carnes",
-        image: "https://supermercadosrondon.com.br/guiadecarnes/images/postagens/as_7_melhores_carnes_para_churrasco_21-05-2019.jpg"
+        image: ""
     ),
     SearchRecipe(
         id: "3",
         title: "Sopas",
-        image: "https://static.wixstatic.com/media/4798a8_0ff820b2a2ed4f25b99dd853ac8ace77~mv2.jpg/v1/fill/w_640,h_428,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/4798a8_0ff820b2a2ed4f25b99dd853ac8ace77~mv2.jpg"
+        image: ""
     )
 ]
+// teste joao pedro
 
 
 struct SearchView: View {
@@ -50,6 +51,7 @@ struct SearchView: View {
                         .resizable()
                         .frame(width: 75, height: 75, alignment: .topLeading)
                         .foregroundColor(Color.white)
+
                         .colorInvert()
                         .padding(.vertical, 30)
                         .padding(.horizontal, 68)
@@ -63,8 +65,16 @@ struct SearchView: View {
                     //                        .padding(.top, 20)
                     
                     Spacer()
+
                     
-                    ForEach(sampleData) { recipe in
+                    Spacer()
+                    
+                    ForEach(sampleDataRecipeType) { recipe in
+                        RecipeTypeView(title: recipe.title!, image: recipe.image!)
+                    }
+
+                    
+                    ForEach(sampleDataRecipeType) { recipe in
                         RecipeTypeView(title: recipe.title!, image: recipe.image!)
                     }
                     .listRowSeparator(.hidden, edges: .all)
@@ -76,6 +86,7 @@ struct SearchView: View {
             
         }
     }
+    
 }
 
 
