@@ -51,7 +51,8 @@ struct RecipeTypeView: View {
                                             } else {
                                                 // Remova a receita dos favoritos
                                             }
-                                        }) {
+                                        })
+                    {
                                             Image(systemName: isFavorited ? "heart.fill" : "heart")
                                                 .resizable()
                                                 .foregroundColor(isFavorited ? .red : .gray)

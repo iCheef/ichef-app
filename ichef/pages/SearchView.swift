@@ -49,15 +49,16 @@ struct SearchView: View {
                         .resizable()
                         .frame(width: 75, height: 75, alignment: .topLeading)
                         .foregroundColor(Color.white)
+                        .colorInvert()
                     
                     
                     Spacer()
-                
-                        ForEach(sampleData) { recipe in
-                            
-                                RecipeTypeView(title: recipe.title!, image: recipe.image!)
-                            
-                        }
+                    
+                    ForEach(sampleData) { recipe in
+                        
+                        RecipeTypeView(title: recipe.title!, image: recipe.image!)
+                        
+                    }
                     
                     
                     .listRowSeparator(.hidden, edges: .all)
@@ -70,9 +71,9 @@ struct SearchView: View {
                 .padding(.horizontal, 68)
                 .navigationTitle("Pesquisar")
                 .searchable(text: $searchText)
+                .foregroundColor(Color.white)
                 
             }
-            
         }
     }
 }
