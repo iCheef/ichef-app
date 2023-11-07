@@ -52,10 +52,10 @@ struct SearchView: View {
                         .foregroundColor(Color.white)
                     
                     Spacer()
-                
-                        ForEach(sampleDataRecipeType) { recipe in
-                                RecipeTypeView(title: recipe.title!, image: recipe.image!)
-                        }
+                    
+                    ForEach(sampleDataRecipeType) { recipe in
+                        RecipeTypeView(title: recipe.title!, image: recipe.image!)
+                    }
                     
                     .listRowSeparator(.hidden, edges: .all)
                     Spacer()
@@ -72,6 +72,7 @@ struct SearchView: View {
             
         }
     }
+    
 }
 
 struct SearchView_Previews: PreviewProvider {

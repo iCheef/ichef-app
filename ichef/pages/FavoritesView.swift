@@ -28,7 +28,7 @@ var sampleDataRecipe: [ SearchRecipe ] =
 
 struct FavoritesView: View {
     @State private var searchText = ""
-
+    
     var body: some View {
         NavigationStack {
             
@@ -39,30 +39,40 @@ struct FavoritesView: View {
                     .ignoresSafeArea()
                 
                 VStack {
+                                        Spacer()
+                                        Spacer()
+                                        Spacer()
+                    
                     Image("Logo_Sem_Slogan")
                         .resizable()
                         .frame(width: 75, height: 75, alignment: .topLeading)
                         .foregroundColor(Color.white)
-                    
-                    Spacer()
-                
-                        ForEach(sampleDataRecipe) { recipe in
+                        .colorInvert()
+                        .padding(.vertical, 50)
+                        .padding(.horizontal, 68)
+                        .navigationTitle("Pesquisar")
+                        .searchable(text: $searchText)
+                    ScrollView{
+                        VStack {
+                            
+                            ForEach(sampleDataRecipe) { recipe in
                                 RecipeView(title: recipe.title!, image: recipe.image!)
+                                Spacer()
+                            }
+//                            .padding(.vertical, 50)
+                            .padding(.horizontal, 68)
+                            
+                            .listRowSeparator(.hidden, edges: .all)
+//                            Spacer()
+//                            Spacer()
+//                            Spacer()
+//                            Spacer()
+                            
                         }
-                    
-                    .listRowSeparator(.hidden, edges: .all)
-                    Spacer()
-                    Spacer()
-                    Spacer()
-                    Spacer()
+                        
+                    }
                 }
-                .padding(.vertical, 50)
-                .padding(.horizontal, 68)
-                .navigationTitle("Pesquisar")
-                .searchable(text: $searchText)
-                
             }
-            
         }
         
         
