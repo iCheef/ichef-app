@@ -12,7 +12,6 @@ struct ichefApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
-            //teste
         }
 
     }

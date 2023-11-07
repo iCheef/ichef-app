@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct RecipeTypeView: View {
+struct RecipeView: View {
     @State public var title : String
     @State public var image : String
     @State private var isFavorited = false
@@ -40,7 +40,20 @@ struct RecipeTypeView: View {
                         Spacer()
                         Spacer()
                         Spacer()
-                    
+                    Button(action: {
+                                            isFavorited.toggle()
+                                            // Aqui você pode adicionar a lógica para adicionar/remover a receita dos favoritos
+                                            if isFavorited {
+                                                // Adicione a receita aos favoritos
+                                            } else {
+                                                // Remova a receita dos favoritos
+                                            }
+                                        }) {
+                                            Image(systemName: isFavorited ? "heart.fill" : "heart")
+                                                .resizable()
+                                                .foregroundColor(isFavorited ? .red : .gray)
+                                                .frame(width: 35, height: 30, alignment: .center)
+                                        }
                     Spacer()
                 }
             }
@@ -48,8 +61,8 @@ struct RecipeTypeView: View {
     }
 }
 
-struct RecipeTypeView_Previews: PreviewProvider {
+struct RecipeView_Previews: PreviewProvider {
     static var previews: some View {
-        RecipeTypeView(title: "Massas", image: "https://static.wixstatic.com/media/4798a8_0ff820b2a2ed4f25b99dd853ac8ace77~mv2.jpg/v1/fill/w_640,h_428,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/4798a8_0ff820b2a2ed4f25b99dd853ac8ace77~mv2.jpg")
+        RecipeView(title: "Massas", image: "https://static.wixstatic.com/media/4798a8_0ff820b2a2ed4f25b99dd853ac8ace77~mv2.jpg/v1/fill/w_640,h_428,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/4798a8_0ff820b2a2ed4f25b99dd853ac8ace77~mv2.jpg")
     }
 }
