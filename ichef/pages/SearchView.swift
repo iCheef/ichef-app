@@ -31,6 +31,7 @@ var sampleData: [ SearchRecipe ] =
     )
 ]
 
+
 struct SearchView: View {
     @State private var searchText = ""
     
@@ -50,33 +51,34 @@ struct SearchView: View {
                         .frame(width: 75, height: 75, alignment: .topLeading)
                         .foregroundColor(Color.white)
                         .colorInvert()
-                    
+                        .padding(.vertical, 30)
+                        .padding(.horizontal, 68)
+                        .navigationTitle("Pesquisar")
+                        .searchable(text: $searchText)
+                    //
+                    //                    Text("Pesquisar")
+                    //                        .font(.largeTitle)
+                    //                        .bold()
+                    //                        .foregroundColor(.white)
+                    //                        .padding(.top, 20)
                     
                     Spacer()
                     
                     ForEach(sampleData) { recipe in
-                        
                         RecipeTypeView(title: recipe.title!, image: recipe.image!)
-                        
                     }
-                    
-                    
                     .listRowSeparator(.hidden, edges: .all)
                     Spacer()
-                    Spacer()
-                    Spacer()
-                    Spacer()
                 }
-                .padding(.vertical, 50)
-                .padding(.horizontal, 68)
-                .navigationTitle("Pesquisar")
-                .searchable(text: $searchText)
-                .foregroundColor(Color.white)
+                
                 
             }
+            
         }
     }
 }
+
+
 
 struct SearchView_Previews: PreviewProvider {
     static var previews: some View {
