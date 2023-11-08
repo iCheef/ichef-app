@@ -16,7 +16,6 @@ struct HomeView: View {
                     .foregroundColor(Color("Background"))
                     .ignoresSafeArea()
                 
-                
                 VStack{
                     Image("Logo_Sem_Slogan")
                         .resizable()
