@@ -62,6 +62,7 @@ struct SearchView: View {
                     
                         VStack {
                             ScrollView{
+                                
                             ForEach(sampleDataRecipeType) { recipe in
                                 RecipeView(title: recipe.title!, image: recipe.image!)
                                 Spacer()
