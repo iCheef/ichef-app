@@ -30,7 +30,6 @@ var sampleDataRecipeType: [ SearchRecipe ] =
         image: ""
     )
 ]
-// teste joao pedro
 
 struct SearchView: View {
     @State private var searchText = ""
@@ -46,40 +45,45 @@ struct SearchView: View {
                     .ignoresSafeArea()
                 
                 VStack {
+                                        Spacer()
+                                        Spacer()
+                                        Spacer()
+                    
                     Image("Logo_Sem_Slogan")
                         .resizable()
                         .frame(width: 75, height: 75, alignment: .topLeading)
                         .foregroundColor(Color.white)
                         .colorInvert()
+                        .padding(.vertical, 50)
+                        .padding(.horizontal, 68)
+                        .navigationTitle("Pesquisar")
+                        .searchable(text: $searchText)
                     
-                    Spacer()
-                    
-                    ForEach(sampleDataRecipeType) { recipe in
-                        RecipeTypeView(title: recipe.title!, image: recipe.image!)
-                    }
-                    
-                    ForEach(sampleDataRecipeType) { recipe in
+                        VStack {
+                            ScrollView{
+                                
+                            ForEach(sampleDataRecipeType) { recipe in
+                                RecipeView(title: recipe.title!, image: recipe.image!)
+                                Spacer()
+                            }
+
+                            .padding(.horizontal, 68)
+                            
+                            .listRowSeparator(.hidden, edges: .all)
+
+                            
+                            }.padding(.vertical, 35)
                         
-                        RecipeTypeView(title: recipe.title!, image: recipe.image!)
-                        
                     }
-                    
-                    .listRowSeparator(.hidden, edges: .all)
-                    Spacer()
-                    Spacer()
-                    Spacer()
-                    Spacer()
+
                 }
-                .padding(.vertical, 50)
-                .padding(.horizontal, 68)
-                .navigationTitle("Pesquisar")
-                .searchable(text: $searchText)
-                .foregroundColor(Color.white)
-                
             }
         }
+        
+        
     }
 }
+
 
 struct SearchView_Previews: PreviewProvider {
     static var previews: some View {

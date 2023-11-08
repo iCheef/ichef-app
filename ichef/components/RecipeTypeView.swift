@@ -21,14 +21,25 @@ struct RecipeTypeView: View {
                 
                 
                 HStack {
-                    AsyncImage(url: URL(string: image))
-                        .scaledToFill()
-                    
-                        .frame(width: 55, height: 55)
-                        .clipped()
-                        .cornerRadius(.infinity)
-                        .padding()
-                    
+                    AsyncImage(url: URL(string: image)) { image in
+                        image
+                            .resizable()
+                            .frame(width: 55, height: 55)
+                            .clipped()
+                            .cornerRadius(.infinity)
+                            .padding()
+                            .aspectRatio(contentMode: .fill)
+                        
+                    } placeholder: {
+                        ProgressView()
+                    }
+                    //                        .scaledToFill()
+                    //
+                    //                        .frame(width: 55, height: 55)
+                    //                        .clipped()
+                    //                        .cornerRadius(.infinity)
+                    //                        .padding()
+                    //
                     Spacer()
                     Text(title)
                         .font(.title)
@@ -56,6 +67,7 @@ struct RecipeTypeView: View {
                             .foregroundColor(isFavorited ? .red : .gray)
                             .frame(width: 35, height: 30, alignment: .center)
                     }
+
                     Spacer()
                 }
             }
