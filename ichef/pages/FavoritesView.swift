@@ -70,7 +70,8 @@ struct FavoritesView: View {
                             
                         }
                         
-                    }
+                    }.padding(.vertical, 35)
+
                 }
             }
         }

@@ -30,8 +30,6 @@ var sampleDataRecipeType: [ SearchRecipe ] =
         image: ""
     )
 ]
-// teste joao pedro
-
 
 struct SearchView: View {
     @State private var searchText = ""
@@ -47,48 +45,43 @@ struct SearchView: View {
                     .ignoresSafeArea()
                 
                 VStack {
+                                        Spacer()
+                                        Spacer()
+                                        Spacer()
+                    
                     Image("Logo_Sem_Slogan")
                         .resizable()
                         .frame(width: 75, height: 75, alignment: .topLeading)
                         .foregroundColor(Color.white)
-
                         .colorInvert()
-                        .padding(.vertical, 30)
+                        .padding(.vertical, 50)
                         .padding(.horizontal, 68)
                         .navigationTitle("Pesquisar")
                         .searchable(text: $searchText)
-                    //
-                    //                    Text("Pesquisar")
-                    //                        .font(.largeTitle)
-                    //                        .bold()
-                    //                        .foregroundColor(.white)
-                    //                        .padding(.top, 20)
                     
-                    Spacer()
+                    
+                        VStack {
+                            ScrollView{
+                            ForEach(sampleDataRecipeType) { recipe in
+                                RecipeView(title: recipe.title!, image: recipe.image!)
+                                Spacer()
+                            }
 
-                    
-                    Spacer()
-                    
-                    ForEach(sampleDataRecipeType) { recipe in
-                        RecipeTypeView(title: recipe.title!, image: recipe.image!)
-                    }
+                            .padding(.horizontal, 68)
+                            
+                            .listRowSeparator(.hidden, edges: .all)
 
-                    
-                    ForEach(sampleDataRecipeType) { recipe in
-                        RecipeTypeView(title: recipe.title!, image: recipe.image!)
+                            
+                            }.padding(.vertical, 35)
+                        
                     }
-                    .listRowSeparator(.hidden, edges: .all)
-                    Spacer()
                 }
-                
-                
             }
-            
         }
+        
+        
     }
-    
 }
-
 
 
 struct SearchView_Previews: PreviewProvider {

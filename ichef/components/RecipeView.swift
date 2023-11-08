@@ -21,20 +21,24 @@ struct RecipeView: View {
                 
                 
                 HStack {
-                    AsyncImage(url: URL(string: image))
-                        .scaledToFill()
-                    
-                        .frame(width: 55, height: 55)
-                        .clipped()
-                        .cornerRadius(.infinity)
-                        .padding()
-                    
+                    AsyncImage(url: URL(string: image)) { image in
+                        image
+                            .resizable()
+                            .frame(width: 55, height: 55)
+                            .clipped()
+                            .cornerRadius(.infinity)
+                            .padding()
+                            .aspectRatio(contentMode: .fill)
+                        
+                    } placeholder: {
+                        ProgressView()
+                    }
                     Spacer()
                     Text(title)
                     .font(.title)
                     .bold()
                     .foregroundColor(.white)
-                    .padding()
+                    .padding(.horizontal)
                         Spacer()
                         Spacer()
                         Spacer()
