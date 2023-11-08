@@ -21,25 +21,26 @@ struct RecipeView: View {
                 
                 
                 HStack {
+//                    Spacer()
                     AsyncImage(url: URL(string: image))
                         .scaledToFill()
                     
                         .frame(width: 55, height: 55)
                         .clipped()
                         .cornerRadius(.infinity)
-                        .padding()
+                        .padding(.horizontal,30)
                     
                     Spacer()
                     Text(title)
                     .font(.title)
                     .bold()
                     .foregroundColor(.white)
-                    .padding()
+//                    .padding()
                         Spacer()
-                        Spacer()
-                        Spacer()
-                        Spacer()
-                        Spacer()
+//                        Spacer()
+//                        Spacer()
+//                        Spacer()
+//                        Spacer()
                     Button(action: {
                                             isFavorited.toggle()
                                             // Aqui você pode adicionar a lógica para adicionar/remover a receita dos favoritos
@@ -53,8 +54,9 @@ struct RecipeView: View {
                                                 .resizable()
                                                 .foregroundColor(isFavorited ? .red : .gray)
                                                 .frame(width: 35, height: 30, alignment: .center)
+                                                .padding(.horizontal,30)
                                         }
-                    Spacer()
+//                    Spacer()
                 }
             }
         }
