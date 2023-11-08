@@ -38,6 +38,7 @@ struct IngredientCardView: View, Identifiable {
                     }
                 })
                 {
+                    
                     Image(systemName: hasIngredient ? "checkmark.circle.fill" : "checkmark.circle")
                         .resizable()
                         .foregroundColor(hasIngredient ? Color("Laranja") : .gray)

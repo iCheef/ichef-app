@@ -26,6 +26,9 @@
 		FAE019BA2AFAF7DC00D79B98 /* TextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE019B92AFAF7DC00D79B98 /* TextFieldView.swift */; };
 		FAE019BC2AFAFB0400D79B98 /* IngredientCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE019BB2AFAFB0300D79B98 /* IngredientCardView.swift */; };
 		FAE019BE2AFAFB1100D79B98 /* IngredientList.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE019BD2AFAFB1100D79B98 /* IngredientList.swift */; };
+		FAE019C02AFB043700D79B98 /* PreparationStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE019BF2AFB043600D79B98 /* PreparationStep.swift */; };
+		FAE019C22AFB07EC00D79B98 /* PreparationStepListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE019C12AFB07EC00D79B98 /* PreparationStepListView.swift */; };
+		FAE019C42AFB0F0A00D79B98 /* MonitorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE019C32AFB0F0A00D79B98 /* MonitorView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +53,9 @@
 		FAE019B92AFAF7DC00D79B98 /* TextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldView.swift; sourceTree = "<group>"; };
 		FAE019BB2AFAFB0300D79B98 /* IngredientCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientCardView.swift; sourceTree = "<group>"; };
 		FAE019BD2AFAFB1100D79B98 /* IngredientList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientList.swift; sourceTree = "<group>"; };
+		FAE019BF2AFB043600D79B98 /* PreparationStep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreparationStep.swift; sourceTree = "<group>"; };
+		FAE019C12AFB07EC00D79B98 /* PreparationStepListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreparationStepListView.swift; sourceTree = "<group>"; };
+		FAE019C32AFB0F0A00D79B98 /* MonitorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonitorView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +91,9 @@
 				FAE019B92AFAF7DC00D79B98 /* TextFieldView.swift */,
 				FAE019BB2AFAFB0300D79B98 /* IngredientCardView.swift */,
 				FAE019BD2AFAFB1100D79B98 /* IngredientList.swift */,
+				FAE019BF2AFB043600D79B98 /* PreparationStep.swift */,
+				FAE019C12AFB07EC00D79B98 /* PreparationStepListView.swift */,
+				FAE019C32AFB0F0A00D79B98 /* MonitorView.swift */,
 			);
 			path = components;
 			sourceTree = "<group>";
@@ -212,6 +221,7 @@
 				FA6D57892AF1B35D0076122D /* ProfileView.swift in Sources */,
 				FA6D57822AF1AE980076122D /* SearchView.swift in Sources */,
 				FA6D577E2AF1AE7A0076122D /* HomeView.swift in Sources */,
+				FAE019C42AFB0F0A00D79B98 /* MonitorView.swift in Sources */,
 				FA6D57862AF1AEB90076122D /* SearchRecipeView.swift in Sources */,
 				FAE019BE2AFAFB1100D79B98 /* IngredientList.swift in Sources */,
 				FA6D578B2AF1BD090076122D /* RecipeTypeView.swift in Sources */,
@@ -223,7 +233,9 @@
 				FA6D578E2AF1BD580076122D /* SearchViewModel.swift in Sources */,
 				FA6D57802AF1AE860076122D /* NavBar.swift in Sources */,
 				FAB3EF052AF1ACB40091F966 /* ContentView.swift in Sources */,
+				FAE019C22AFB07EC00D79B98 /* PreparationStepListView.swift in Sources */,
 				FAB3EF032AF1ACB40091F966 /* ichefApp.swift in Sources */,
+				FAE019C02AFB043700D79B98 /* PreparationStep.swift in Sources */,
 				FAE019B42AF9BF9700D79B98 /* UserModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
