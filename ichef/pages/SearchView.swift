@@ -26,7 +26,7 @@ var sampleDataRecipeType: [ SearchRecipe ] =
     ),
     SearchRecipe(
         id: "3",
-        title: "Sopas",
+        title: "Saladas",
         image: "https://institucional.hortifruti.com.br/wp-content/uploads/2015/06/sopa-de-inverno.jpg"
     )
 ]

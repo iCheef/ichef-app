@@ -28,8 +28,6 @@ struct RecipeTypeView: View {
                         .cornerRadius(.infinity)
                         .padding()
                         .aspectRatio(contentMode: .fill)
-                    
-
                 } placeholder: {
                     ProgressView()
 
