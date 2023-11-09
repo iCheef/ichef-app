@@ -47,10 +47,7 @@ struct FavoritesView: View {
                         .frame(width: 75, height: 75, alignment: .topLeading)
                         .foregroundColor(Color.white)
                         .colorInvert()
-                        .padding(.vertical, 50)
-                        .padding(.horizontal, 68)
-                        .navigationTitle("Pesquisar")
-                        .searchable(text: $searchText)
+                        .padding(.vertical, -20)
 
                         HStack {
                             ScrollView{
