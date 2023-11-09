@@ -10,6 +10,7 @@ struct SearchRecipe : Decodable, Identifiable {
     var id      : String?
     var title   : String?
     var image   : String?
+    var nota    : Double?
 }
 
 var sampleDataRecipeType: [ SearchRecipe ] =
@@ -70,7 +71,7 @@ struct SearchView: View {
 
                             .padding(.horizontal, 68)
                             
-                            .listRowSeparator(.hidden, edges: .all)
+                            
 
                             
                             }.padding(.vertical, 35)

@@ -12,17 +12,17 @@ var sampleDataRecipe: [ SearchRecipe ] =
     SearchRecipe(
         id: "1",
         title: "Pizza Marguerita",
-        image: "https://static.wixstatic.com/media/4798a8_0ff820b2a2ed4f25b99dd853ac8ace77~mv2.jpg/v1/fill/w_640,h_428,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/4798a8_0ff820b2a2ed4f25b99dd853ac8ace77~mv2.jpg"
+        image: "https://static.itdg.com.br/images/1200-630/c0402ec0fd16e13c7b7b691151d53e1d/277814-original.jpg"
     ),
     SearchRecipe(
         id: "2",
         title: "Lasanha De Carne",
-        image: "https://supermercadosrondon.com.br/guiadecarnes/images/postagens/as_7_melhores_carnes_para_churrasco_21-05-2019.jpg"
+        image: "https://receitasdedelicias.com.br/wp-content/uploads/2023/05/Lasanha-de-Carne-Moida.jpg"
     ),
     SearchRecipe(
         id: "3",
         title: "Macarrão a Bolonhesa",
-        image: "https://static.wixstatic.com/media/4798a8_0ff820b2a2ed4f25b99dd853ac8ace77~mv2.jpg/v1/fill/w_640,h_428,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/4798a8_0ff820b2a2ed4f25b99dd853ac8ace77~mv2.jpg"
+        image: "https://areademulher.r7.com/wp-content/uploads/2022/04/macarrao-a-bolonhesa-receita-simples-e-facil-de-fazer.jpeg"
     )
 ]
 
@@ -40,19 +40,18 @@ struct FavoritesView: View {
                         .ignoresSafeArea()
                 
                 VStack {
-                    Spacer()
-                    Spacer()
-                    Spacer()
                     
                     Image("Logo_Sem_Slogan")
                         .resizable()
-                        .frame(width: 75, height: 75, alignment: .topLeading)
+                        .position(x:40, y:90)
+                        .frame(width: 75, height: 75)
+                    
                         .foregroundColor(Color.white)
                         .colorInvert()
-                        .padding(.vertical, 50)
+                        .padding(.vertical, 150)
                         .padding(.horizontal, 68)
-                        .navigationTitle("Pesquisar")
-                        .searchable(text: $searchText)
+//                        .navigationTitle("")
+//                        .searchable(text: $searchText)
 
                         VStack {
                             ScrollView{
@@ -69,7 +68,8 @@ struct FavoritesView: View {
                         }
                         
                         
-                    }.padding(.vertical, 35)
+                    }
+                        .padding(.vertical, -35)
                     
                     
                     

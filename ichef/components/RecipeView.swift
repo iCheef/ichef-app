@@ -16,7 +16,7 @@ struct RecipeView: View {
         NavigationStack {
             ZStack{
                 RoundedRectangle(cornerRadius: 12)
-                    .frame(height: 75)
+                    .frame(height: 80)
                     .foregroundColor(.black.opacity(0.39))
                 
                 
@@ -35,17 +35,18 @@ struct RecipeView: View {
                         ProgressView()
                     }
 
-                    Spacer()
+//                    Spacer()
                     Text(title)
-                    .font(.title)
+                    .font(.title3)
                     .bold()
                     .foregroundColor(.white)
 
-                    .padding(.horizontal)
-                        Spacer()
-                        Spacer()
-                        Spacer()
-                        Spacer()
+//                    .padding(.horizontal)
+                    .multilineTextAlignment(.center)
+//                        Spacer()
+//                        Spacer()
+//                        Spacer()
+//                        Spacer()
 
 //                    .padding()
 
@@ -54,6 +55,7 @@ struct RecipeView: View {
 //                        Spacer()
 //                        Spacer()
 //                        Spacer()
+                    
                     Button(action: {
                                             isFavorited.toggle()
                                             // Aqui você pode adicionar a lógica para adicionar/remover a receita dos favoritos
