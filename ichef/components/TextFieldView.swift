@@ -18,7 +18,7 @@ struct TextFieldView: View {
             HStack{
                 Text(title)
                     .font(.title)
-                    .bold()
+                    
                     .foregroundColor(.white)
                     .padding()
                 Spacer()

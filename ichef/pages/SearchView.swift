@@ -47,10 +47,9 @@ struct SearchView: View {
                     
                     Image("Logo_Sem_Slogan")
                         .resizable()
-                        .frame(width: 75, height: 75, alignment: .topLeading)
+                        .frame(width: 85, height: 85, alignment: .topLeading)
                         .foregroundColor(Color.white)
                         .colorInvert()
-                    
                     
                     VStack {
                         ScrollView{

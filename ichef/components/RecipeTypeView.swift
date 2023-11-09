@@ -29,6 +29,7 @@ struct RecipeTypeView: View {
                         .padding()
                         .aspectRatio(contentMode: .fill)
                     
+
                 } placeholder: {
 
                 }
