@@ -30,7 +30,7 @@ struct RecipeTypeView: View {
                         .aspectRatio(contentMode: .fill)
                     
                 } placeholder: {
-                    ProgressView()
+
                 }
                 
                 Spacer()

@@ -11,7 +11,7 @@ struct ContentView: View {
     var body: some View {
         NavBar()
     }
-}
+}git
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
