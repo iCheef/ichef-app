@@ -34,10 +34,8 @@ struct FavoritesView: View {
         NavigationStack {
             
             ZStack {
-                    Rectangle()
-                        .frame(width: 500, height: 1000)
-                        .foregroundColor(Color("Background"))
-                        .ignoresSafeArea()
+                Color("Background")
+                    .ignoresSafeArea()
                 
                 VStack {
                     Spacer()
@@ -54,16 +52,15 @@ struct FavoritesView: View {
                         .navigationTitle("Pesquisar")
                         .searchable(text: $searchText)
 
-                        VStack {
+                        HStack {
                             ScrollView{
 
-                            ForEach(sampleDataRecipe) { recipe in
-                                RecipeView(title: recipe.title!, image: recipe.image!)
-                                Spacer()
-                            }
-                            
-                            .padding(.horizontal, 68)
-                            
+                                ForEach(sampleDataRecipe) { recipe in
+                                    NavigationLink(destination: SearchRecipeView(type: "a")){
+                                        RecipeView(title: recipe.title!, image: recipe.image!)
+                                    }
+                                    Spacer()
+                                }
                             .listRowSeparator(.hidden, edges: .all)
                           
                         }
