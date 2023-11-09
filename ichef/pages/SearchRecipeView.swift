@@ -74,6 +74,6 @@ struct SearchRecipeView: View {
 
 struct SearchRecipeView_Previews: PreviewProvider {
     static var previews: some View {
-        SearchRecipeView(type:"massas")
+        SearchRecipeView(type:"Massas")
     }
 }
