@@ -10,9 +10,7 @@ import SwiftUI
 struct HomeView: View {
     var body: some View {
         ZStack {
-            Rectangle()
-                .frame(width: 500, height: 1000)
-                .foregroundColor(Color("Background"))
+            Color("Background")
                 .ignoresSafeArea()
             
             Text("HomeView")
