@@ -16,6 +16,7 @@ struct HomeView: View {
     @State public var recipe : RecipeModel?
     
     var body: some View {
+
         
         if (hasRecipe) {
             ScrollView{

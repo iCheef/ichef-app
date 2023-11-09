@@ -74,29 +74,39 @@ struct SearchRecipeView: View {
     @State  var type : String
     @State private var actualTypeData : [ SearchRecipe ] = []
     var body: some View {
-        NavigationStack {
+        NavigationView {
+            
             ZStack {
                 Color("Background")
                     .ignoresSafeArea()
-                
                 
                 VStack{
                     
                     Image("Logo_Sem_Slogan")
                         .resizable()
                         .scaledToFit()
-                        .frame(width: 75, height: 75, alignment: .topLeading)
+                        .frame(width: 85, height: 85, alignment: .topLeading)
                         .colorInvert()
-                        .padding(.vertical, -250)
+                        .padding(.vertical, -60)
                     
                     VStack {
-                        
-                        ForEach(actualTypeData) { recipe in
-                            RecipeView(title: recipe.title!, image: recipe.image!)
+                        ScrollView {
+                            ForEach(actualTypeData) { recipe in
+                                NavigationLink(destination: HomeView(hasRecipe: true, recipe: RecipeModel(id: recipe.id, name: recipe.title, steps: test_steps, ingredients: test_ingredients, time: "30", portions: "10", difficulty: "Fácil"))){
+                                    VStack {
+                                        
+                                        RecipeTypeView(title: recipe.title!, image: recipe.image!)
+                                        Spacer()
+                                    }.multilineTextAlignment(.leading)
+                                }
+                                .padding(.horizontal, 10)
+                                
+                                .listRowSeparator(.hidden, edges: .all)
+                                
+                                
+                            }
                             
                         }
-                        .padding(.horizontal, 5)
-                        
                     }
                 }.onAppear(){
                     if (type == "Massas"){
@@ -112,12 +122,10 @@ struct SearchRecipeView: View {
                 
             }
         }
-        
-       // .navigationTitle("Pesquisar")
         .searchable(text: $searchText)
         
     }
-        
+    
 }
 
 

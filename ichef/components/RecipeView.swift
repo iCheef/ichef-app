@@ -14,10 +14,10 @@ struct RecipeView: View {
     //static var recipeTypes : [ SearchRecipe ] = sampleDataRecipeType
     var body: some View {
         ZStack{
-            RoundedRectangle(cornerRadius: 12)
-                .frame(height: 75)
-                .foregroundColor(.black.opacity(0.39))
-            
+        
+                RoundedRectangle(cornerRadius: 12)
+                    .frame(height: 75)
+                    .foregroundColor(.black.opacity(0.39))
             
             HStack {
                 
@@ -56,8 +56,9 @@ struct RecipeView: View {
                         .foregroundColor(isFavorited ? .red : .gray)
                         .frame(width: 35, height: 30, alignment: .center)
                         .padding(.horizontal,30)
+                    
                 }
-                //                    Spacer()
+                            Spacer()
             }
         }
     }
