@@ -13,66 +13,40 @@ struct RecipeTypeView: View {
     @State private var isFavorited = false
     static var recipeTypes : [ SearchRecipe ] = sampleDataRecipeType
     var body: some View {
-        NavigationStack {
-            ZStack{
-                RoundedRectangle(cornerRadius: 12)
-                    .frame(height: 75)
-                    .foregroundColor(.black.opacity(0.39))
-                
-                
-                HStack {
-                    AsyncImage(url: URL(string: image)) { image in
-                        image
-                            .resizable()
-                            .frame(width: 55, height: 55)
-                            .clipped()
-                            .cornerRadius(.infinity)
-                            .padding()
-                            .aspectRatio(contentMode: .fill)
-                        
-                    } placeholder: {
-                        ProgressView()
-                    }
-                    //                        .scaledToFill()
-                    //
-                    //                        .frame(width: 55, height: 55)
-                    //                        .clipped()
-                    //                        .cornerRadius(.infinity)
-                    //                        .padding()
-                    //
-                    Spacer()
-                    Text(title)
-                        .font(.title)
-                        .bold()
-                        .foregroundColor(.white)
+        ZStack{
+            RoundedRectangle(cornerRadius: 12)
+                .frame(height: 75)
+                .foregroundColor(.black.opacity(0.39))
+            
+            
+            HStack {
+                AsyncImage(url: URL(string: image)) { image in
+                    image
+                        .resizable()
+                        .frame(width: 55, height: 55)
+                        .clipped()
+                        .cornerRadius(.infinity)
                         .padding()
-                    Spacer()
-                    Spacer()
-                    Spacer()
-                    Spacer()
-                    Spacer()
+                        .aspectRatio(contentMode: .fill)
                     
-                    Button(action: {
-                        isFavorited.toggle()
-                        // Aqui você pode adicionar a lógica para adicionar/remover a receita dos favoritos
-                        if isFavorited {
-                            // Adicione a receita aos favoritos
-                        } else {
-                            // Remova a receita dos favoritos
-                        }
-                    })
-                    {
-                        Image(systemName: isFavorited ? "heart.fill" : "heart")
-                            .resizable()
-                            .foregroundColor(isFavorited ? .red : .gray)
-                            .frame(width: 35, height: 30, alignment: .center)
-                    }
-                    
-                    Spacer()
+                } placeholder: {
+                    ProgressView()
                 }
+                
+                Spacer()
+                Text(title)
+                    .font(.title)
+                //    .bold()
+                    .foregroundColor(.white)
+                    .padding(.horizontal)
+                    .multilineTextAlignment(.leading)
+                Spacer()
+                Spacer()
+                Spacer()
             }
         }
     }
+    
 }
 
 struct RecipeTypeView_Previews: PreviewProvider {
