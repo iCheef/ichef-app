@@ -12,17 +12,20 @@ var sampleDataRecipe: [ SearchRecipe ] =
     SearchRecipe(
         id: "1",
         title: "Pizza Marguerita",
-        image: "https://static.itdg.com.br/images/1200-630/c0402ec0fd16e13c7b7b691151d53e1d/277814-original.jpg"
+        image: "https://static.itdg.com.br/images/1200-630/c0402ec0fd16e13c7b7b691151d53e1d/277814-original.jpg",
+        nota: 3
     ),
     SearchRecipe(
         id: "2",
         title: "Lasanha De Carne",
-        image: "https://receitasdedelicias.com.br/wp-content/uploads/2023/05/Lasanha-de-Carne-Moida.jpg"
+        image: "https://receitasdedelicias.com.br/wp-content/uploads/2023/05/Lasanha-de-Carne-Moida.jpg",
+        nota: 4
     ),
     SearchRecipe(
         id: "3",
         title: "Macarrão a Bolonhesa",
-        image: "https://areademulher.r7.com/wp-content/uploads/2022/04/macarrao-a-bolonhesa-receita-simples-e-facil-de-fazer.jpeg"
+        image: "https://areademulher.r7.com/wp-content/uploads/2022/04/macarrao-a-bolonhesa-receita-simples-e-facil-de-fazer.jpeg",
+        nota: 5
     )
 ]
 
@@ -41,24 +44,17 @@ struct FavoritesView: View {
                     
                     Image("Logo_Sem_Slogan")
                         .resizable()
-                        .position(x:40, y:90)
                         .frame(width: 75, height: 75)
-                    
-                        .foregroundColor(Color.white)
                         .colorInvert()
-                        .padding(.vertical, 150)
-                        .padding(.horizontal, 68)
-//                        .navigationTitle("")
-//                        .searchable(text: $searchText)
+                        .multilineTextAlignment(.center)
 
                         HStack {
                             ScrollView{
-
+                                
                                 ForEach(sampleDataRecipe) { recipe in
-                                    NavigationLink(destination: SearchRecipeView(type: "a")){
-                                        RecipeView(title: recipe.title!, image: recipe.image!)
-                                    }
-                                    Spacer()
+                                        RecipeView(title: recipe.title!, image: recipe.image!,nota: recipe.nota!)
+                                        .padding(.vertical, 0)
+                                        .padding(.horizontal, 10)
                                 }
                             .listRowSeparator(.hidden, edges: .all)
                           
@@ -66,7 +62,7 @@ struct FavoritesView: View {
                         
                         
                     }
-                        .padding(.vertical, -35)
+                        .padding(.vertical, -10)
                     
                     
                     

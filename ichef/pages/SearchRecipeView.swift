@@ -34,7 +34,6 @@ var sampleDataRecipeMassas: [ SearchRecipe ] =
 struct SearchRecipeView: View {
     @State  var searchText = ""
     @State  var type : String
-    //@State private var actualTypeData : [SearchRecipe]
     var body: some View {
         NavigationStack {
             ZStack {
@@ -54,7 +53,7 @@ struct SearchRecipeView: View {
                     VStack {
                         
                         ForEach(sampleDataRecipeMassas) { recipe in
-                            RecipeView(title: recipe.title!, image: recipe.image!)
+                            RecipeView(title: recipe.title!, image: recipe.image!,nota:4)
                             
                         }
                         .padding(.horizontal, 5)

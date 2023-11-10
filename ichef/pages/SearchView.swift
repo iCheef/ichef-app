@@ -10,7 +10,7 @@ struct SearchRecipe : Decodable, Identifiable {
     var id      : String?
     var title   : String?
     var image   : String?
-    var nota    : Double?
+    var nota    : Int?
 }
 
 var sampleDataRecipeType: [ SearchRecipe ] =
@@ -64,25 +64,18 @@ struct SearchView: View {
                                     }.multilineTextAlignment(.leading)
                                 }
                                 .padding(.horizontal, 10)
-                                
                                 .listRowSeparator(.hidden, edges: .all)
-                                
-                                
                             }
-                                                        
-                            }.padding(.vertical, 35)
+                        }
+                        .padding(.vertical, 35)
                     }
                 }.padding(.top,30)
-            }
-        }
-        
-        
-    }
+            }}}
+    
 }
-
-
 struct SearchView_Previews: PreviewProvider {
     static var previews: some View {
         SearchView()
     }
 }
+
