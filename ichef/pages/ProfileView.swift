@@ -24,7 +24,7 @@ struct ProfileView: View {
                             .scaledToFit()
                             .frame(width: 85, height: 85, alignment: .topLeading)
                             .colorInvert()
-                            .padding(.vertical, -370)
+                            .padding(.vertical, -330)
                         
                         
                         Image(systemName: "person.circle.fill")

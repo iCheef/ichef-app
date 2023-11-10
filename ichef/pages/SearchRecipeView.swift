@@ -73,6 +73,7 @@ struct SearchRecipeView: View {
     @State  var searchText = ""
     @State  var type : String
     @State private var actualTypeData : [ SearchRecipe ] = []
+    
     var body: some View {
         NavigationView {
             
@@ -105,6 +106,7 @@ struct SearchRecipeView: View {
                                 
                                 
                             }
+                            
                             
                         }
                     }

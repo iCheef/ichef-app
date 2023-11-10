@@ -10,6 +10,7 @@ struct SearchRecipe : Decodable, Identifiable {
     var id      : String?
     var title   : String?
     var image   : String?
+    var nota    : Int?
 }
 
 var sampleDataRecipeType: [ SearchRecipe ] =
@@ -63,23 +64,25 @@ struct SearchView: View {
                                 } .toolbar {
                                 }
 
-                                
-                                
                             }
-                            
                         }
+                        .padding(.vertical, 35)
                     }
                 }.padding(.top,30)
             }
+            .toolbarBackground(
+                Color("Background"),
+                for: .navigationBar)
+            .toolbarBackground(.visible, for: .navigationBar)
+            
         }
         
-        
     }
+    
 }
-
-
 struct SearchView_Previews: PreviewProvider {
     static var previews: some View {
         SearchView()
     }
 }
+
