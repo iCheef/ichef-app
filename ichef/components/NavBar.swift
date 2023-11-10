@@ -9,40 +9,52 @@ import SwiftUI
 
 // Barra de navagação
 struct NavBar: View {
+    init() {
+      UITabBar.appearance().unselectedItemTintColor = UIColor.white
+    }
     var body: some View {
+
         ZStack{
-            TabView {
+            VStack{
+                TabView {
                     HomeView(hasRecipe: false)
                         .tabItem {
                             Image(systemName: "house")
                                 .resizable()
-                                .foregroundStyle(.red, .red)
+                            //  .foregroundStyle(.red, .red)
                                 .frame(width: 200, height: 200, alignment: .center)
-                    }
+                        }
                     SearchView()
                         .tabItem {
                             Image(systemName: "magnifyingglass")
                                 .resizable()
-                                .foregroundStyle(.red, .red)
+                            //.foregroundStyle(.red, .red)
                                 .frame(width: 200, height: 200, alignment: .center)
-                    }
+                        }
                     FavoritesView()
                         .tabItem {
                             Image(systemName: "heart.fill")
                                 .resizable()
-                                .foregroundStyle(.gray, .red)
+                            //.foregroundStyle(.red, .red)
                                 .frame(width: 200, height: 200, alignment: .center)
-                    }
+                        }
                     ProfileView()
                         .tabItem {
                             Image(systemName: "person.fill")
                                 .resizable()
-                                .foregroundStyle(.red, .red)
+                            //  .foregroundStyle(.red, .red)
                                 .frame(width: 200, height: 200, alignment: .center)
-                    }
-                }
+                        }
+                }.accentColor(Color("Laranja"))
+            }.onAppear(){
+                
+
+                UITabBar.appearance().barTintColor = UIColor(Color("Background"))
+
+                
+            }
         }
-        .background(Color(""))
+        .background(Color("Background"))
         
     }
 }

@@ -16,12 +16,10 @@ struct MonitorView: View {
             
             VStack{
                 Text("Monitor")
-                    .font(.title2)
+                    .font(.title)
+                    .bold()
                     .foregroundColor(.white)
-                
-                Text("quantidade")
-                    .font(.title2)
-                    .foregroundColor(Color("Laranja"))
+            
                 
 //                Button(action: {
 //                    hasIngredient.toggle()

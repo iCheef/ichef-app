@@ -115,7 +115,7 @@ struct SearchRecipeView: View {
                     else if (type == "Carnes") {
                         actualTypeData = sampleDataRecipeCarnes
                     }
-                    else if (type == "Salada") {
+                    else if (type == "Saladas") {
                         actualTypeData = sampleDataRecipeSaladas
                     }
                 }

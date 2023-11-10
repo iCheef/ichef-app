@@ -16,83 +16,87 @@ struct HomeView: View {
     @State public var recipe : RecipeModel?
     
     var body: some View {
-
-        
-        if (hasRecipe) {
-            ScrollView{
-                ZStack {
-                    Rectangle()
-                        .frame(width: 500)
-                        .foregroundColor(Color("Background"))
-                        .ignoresSafeArea()
-                    
-                    VStack{
-                        Image("Logo_Sem_Slogan")
-                            .resizable()
-                            .frame(width: 85, height: 85)
-                            .colorInvert()
-                        
-                        RecipeTitleView(title: recipe!.name!, time: recipe!.time!, portions: recipe!.portions!, difficulty: recipe!.difficulty!)
-                            .padding(.horizontal, 75)
-                        
-                        TextFieldView(title: "Ingredientes")
-                            .padding(.horizontal, 75)
-                        
-                        IngredientList(ingredients: recipe!.ingredients!)
-                        
-                        TextFieldView(title: "Modo de preparo")
-                            .padding(.horizontal, 75)
-                        
-                        PreparationStepListView(steps: recipe!.steps!)
-                            .padding(.horizontal, 35)
-                        
-                        MonitorView()
-                        
-                    }
-                    
-                }
-            }
-            .background(Color("Background"))
+        VStack{
             
-        }
-        else if(!hasRecipe) {
-            ScrollView{
-                ZStack {
-                    Rectangle()
-                        .frame(width: 500)
-                        .foregroundColor(Color("Background"))
-                        .ignoresSafeArea()
-                    
-                    VStack{
-                        Image("Logo_Sem_Slogan")
-                            .resizable()
-                            .frame(width: 85, height: 85)
-                            .colorInvert()
+            if (hasRecipe) {
+                ScrollView{
+                    ZStack {
+                        Rectangle()
+                            .frame(width: 500)
+                            .foregroundColor(Color("Background"))
+                            .ignoresSafeArea()
                         
-                        RecipeTitleView(title: "Escolha uma receita", time: "", portions: "", difficulty: "")
-                            .padding(.horizontal, 75)
-                        
-                        TextFieldView(title: "Ingredientes")
-                            .padding(.horizontal, 75)
-                        
-                        //IngredientList(ingredients: test_ingredients)
-                        
-                        TextFieldView(title: "Modo de preparo")
-                            .padding(.horizontal, 75)
-                        
-                        //                        PreparationStepListView(steps: test_steps)
-                        //                            .padding(.horizontal, 35)
-                        
-                        MonitorView()
-                            .padding(.horizontal, 35)
+                        VStack{
+                            Image("Logo_Sem_Slogan")
+                                .resizable()
+                                .frame(width: 85, height: 85)
+                                .colorInvert()
+                            
+                            RecipeTitleView(title: recipe!.name!, time: recipe!.time!, portions: recipe!.portions!, difficulty: recipe!.difficulty!)
+                                .padding(.horizontal, 75)
+                            
+                            TextFieldView(title: "Ingredientes")
+                                .padding(.horizontal, 75)
+                            
+                            IngredientList(ingredients: recipe!.ingredients!)
+                            
+                            TextFieldView(title: "Modo de preparo")
+                                .padding(.horizontal, 75)
+                            
+                            PreparationStepListView(steps: recipe!.steps!)
+                                .padding(.horizontal, 35)
+                            
+                            MonitorView()
+                            
+                        }
                         
                     }
-                    
                 }
+                .background(Color("Background"))
+                
             }
-            .background(Color("Background"))
+            else if(!hasRecipe) {
+                ScrollView{
+                    ZStack {
+                        Rectangle()
+                            .frame(width: 500)
+                            .foregroundColor(Color("Background"))
+                            .ignoresSafeArea()
+                        
+                        VStack{
+                            Image("Logo_Sem_Slogan")
+                                .resizable()
+                                .frame(width: 85, height: 85)
+                                .colorInvert()
+                            
+                            RecipeTitleView(title: "Escolha uma receita na tela de search", time: "", portions: "", difficulty: "")
+                                .padding(.horizontal, 75)
+                            
+                            TextFieldView(title: "Ingredientes")
+                                .padding(.horizontal, 75)
+                            
+                            //IngredientList(ingredients: test_ingredients)
+                            
+                            TextFieldView(title: "Modo de preparo")
+                                .padding(.horizontal, 75)
+                            
+                            //                        PreparationStepListView(steps: test_steps)
+                            //                            .padding(.horizontal, 35)
+                            
+                            MonitorView()
+                                .padding(.horizontal, 35)
+                            
+                        }
+                        
+                    }
+                }
+                .background(Color("Background"))
+            }
         }
-        
+            .toolbarBackground(
+                Color("Background"),
+                for: .navigationBar)
+            .toolbarBackground(.visible, for: .navigationBar)
         
     }
 }

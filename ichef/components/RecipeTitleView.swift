@@ -21,7 +21,7 @@ struct RecipeTitleView: View {
             
             VStack {
                 Text(title)
-                    .font(.title)
+                    .font(.title2)
                     .bold()
                     .foregroundColor(.white)
                 

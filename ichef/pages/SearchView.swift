@@ -34,10 +34,10 @@ var sampleDataRecipeType: [ SearchRecipe ] =
 struct SearchView: View {
     @State private var searchText = ""
     @State  var type = ""
-    
+
     var body: some View {
         
-        NavigationView {
+        NavigationStack {
             
             ZStack {
                 Color("Background")
@@ -60,10 +60,9 @@ struct SearchView: View {
                                         RecipeTypeView(title: recipe.title!, image: recipe.image!)
                                         Spacer()
                                     }.multilineTextAlignment(.leading)
+                                } .toolbar {
                                 }
-                                .padding(.horizontal, 10)
-                                
-                                .listRowSeparator(.hidden, edges: .all)
+
                                 
                                 
                             }
