@@ -36,17 +36,17 @@ var sampleDataRecipeCarnes: [ SearchRecipe ] =
     SearchRecipe(
         id: "1",
         title: "Bife wagyu",
-        image: "https://static.itdg.com.br/images/1200-675/108cb886572a98cb7d90372c5a799ff0/353778-original.jpg"
+        image: "https://s2.glbimg.com/HycOIww_t_K8-yxxh9iwF3rVF2I=/620x480/smart/e.glbimg.com/og/ed/f/original/2022/04/19/bife_de_chorizo_wagyu.jpg"
     ),
     SearchRecipe(
         id: "2",
         title: "Filé a parmegiana",
-        image: "https://cdn0.tudoreceitas.com/pt/posts/9/8/3/pizza_calabresa_e_mussarela_4389_600.jpg"
+        image: "https://www.receiteria.com.br/wp-content/uploads/file-de-frango-parmegiana-730x548.jpeg"
     ),
     SearchRecipe(
         id: "3",
-        title: "",
-        image: "https://www.minhareceita.com.br/app/uploads/2022/10/panqueca650.jpg"
+        title: "Frango Frito",
+        image: "https://cdn0.tudoreceitas.com/pt/posts/5/0/1/frango_frito_americano_do_kfc_5105_orig.jpg"
     )
 ]
 
@@ -55,17 +55,17 @@ var sampleDataRecipeSaladas: [ SearchRecipe ] =
     SearchRecipe(
         id: "1",
         title: "Vinagrete",
-        image: "https://static.itdg.com.br/images/1200-675/108cb886572a98cb7d90372c5a799ff0/353778-original.jpg"
+        image: "https://cdn0.tudoreceitas.com/pt/posts/4/4/3/vinagrete_simples_para_churrasco_6344_600.jpg"
     ),
     SearchRecipe(
         id: "2",
         title: "Salada de frutas",
-        image: "https://cdn0.tudoreceitas.com/pt/posts/9/8/3/pizza_calabresa_e_mussarela_4389_600.jpg"
+        image: "https://receitahomeoffice.com.br/wp-content/uploads/2023/07/salada-de-frutas-scaled.webp"
     ),
     SearchRecipe(
         id: "3",
         title: "Salada Caesar",
-        image: "https://www.minhareceita.com.br/app/uploads/2022/10/panqueca650.jpg"
+        image: "https://img.cybercook.com.br/receitas/950/salada-cesar-com-camarao.jpeg"
     )
 ]
 
