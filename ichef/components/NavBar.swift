@@ -12,7 +12,7 @@ struct NavBar: View {
     var body: some View {
         ZStack{
             TabView {
-                    HomeView()
+                    HomeView(hasRecipe: false)
                         .tabItem {
                             Image(systemName: "house")
                                 .resizable()
@@ -30,7 +30,7 @@ struct NavBar: View {
                         .tabItem {
                             Image(systemName: "heart.fill")
                                 .resizable()
-                                .foregroundStyle(.red, .red)
+                                .foregroundStyle(.gray, .red)
                                 .frame(width: 200, height: 200, alignment: .center)
                     }
                     ProfileView()

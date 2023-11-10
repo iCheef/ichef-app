@@ -7,11 +7,16 @@
 
 import SwiftUI
 
+
+var recipe = RecipeModel(id: "1", name: "Macarrão", steps: test_steps, ingredients: test_ingredients,time: "30", portions: "10", difficulty: "Fácil" )
+
 struct HomeView: View {
-    
-    @State public var hasRecipe = true
+    //@State public var steps : [ PreparationStep ]
+    @State public var hasRecipe : Bool
+    @State public var recipe : RecipeModel?
     
     var body: some View {
+
         
         if (hasRecipe) {
             ScrollView{
@@ -27,18 +32,18 @@ struct HomeView: View {
                             .frame(width: 85, height: 85)
                             .colorInvert()
                         
-//                        RecipeTitleView(title: "Macarrão ao molho branco", time: "30", portions: "10", difficulty: "Fácil")
-//                            .padding(.horizontal, 75)
+                        RecipeTitleView(title: recipe!.name!, time: recipe!.time!, portions: recipe!.portions!, difficulty: recipe!.difficulty!)
+                            .padding(.horizontal, 75)
                         
                         TextFieldView(title: "Ingredientes")
                             .padding(.horizontal, 75)
                         
-                        IngredientList(ingredients: test_ingredients)
+                        IngredientList(ingredients: recipe!.ingredients!)
                         
                         TextFieldView(title: "Modo de preparo")
                             .padding(.horizontal, 75)
                         
-                        PreparationStepListView(steps: test_steps)
+                        PreparationStepListView(steps: recipe!.steps!)
                             .padding(.horizontal, 35)
                         
                         MonitorView()
@@ -48,7 +53,7 @@ struct HomeView: View {
                 }
             }
             .background(Color("Background"))
-
+            
         }
         else if(!hasRecipe) {
             ScrollView{
@@ -75,8 +80,8 @@ struct HomeView: View {
                         TextFieldView(title: "Modo de preparo")
                             .padding(.horizontal, 75)
                         
-//                        PreparationStepListView(steps: test_steps)
-//                            .padding(.horizontal, 35)
+                        //                        PreparationStepListView(steps: test_steps)
+                        //                            .padding(.horizontal, 35)
                         
                         MonitorView()
                             .padding(.horizontal, 35)
@@ -87,13 +92,13 @@ struct HomeView: View {
             }
             .background(Color("Background"))
         }
-            
+        
         
     }
 }
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-        HomeView()
+        HomeView(hasRecipe: false)
     }
 }

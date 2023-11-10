@@ -26,8 +26,8 @@ var sampleDataRecipeType: [ SearchRecipe ] =
     ),
     SearchRecipe(
         id: "3",
-        title: "Sopas",
-        image: "https://institucional.hortifruti.com.br/wp-content/uploads/2015/06/sopa-de-inverno.jpg"
+        title: "Saladas",
+        image: "https://images.ecycle.com.br/wp-content/uploads/2022/01/19181441/anna-pelzer-IGfIGP5ONV0-unsplash-scaled.jpg.webp"
     )
 ]
 
@@ -47,11 +47,9 @@ struct SearchView: View {
                     
                     Image("Logo_Sem_Slogan")
                         .resizable()
-                        .frame(width: 75, height: 75, alignment: .topLeading)
+                        .frame(width: 85, height: 85, alignment: .topLeading)
                         .foregroundColor(Color.white)
                         .colorInvert()
-                    
-
                     
                     VStack {
                         ScrollView{
@@ -72,7 +70,6 @@ struct SearchView: View {
                             
                         }
                     }
-
                 }.padding(.top,30)
             }
         }
